@@ -1,0 +1,4 @@
+1. This class implements the List interface. It is similar to Vector class except that Vector is synchronized but
+ArrayList is not.
+2. It can store null.
+3. Its iterator also has fail-fast behavior, and this should only be used to detect bugs.
