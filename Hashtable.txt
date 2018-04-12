@@ -5,3 +5,18 @@ through iterator, a ConcurrentModificationException will be thrown. Don't rely o
 If a thread-safe implementation is not needed, it is recommended to use HashMap in place of Hashtable.  If a thread-safe
 highly-concurrent implementation is desired, then it is recommended to use {@link java.util.concurrent.ConcurrentHashMap}
 in place of Hashtable.
+
+3. The count field is transit int, which means this can't be serialized.
+Transient is a variables modifier used in serialization. At the time of serialization,
+if we don’t want to save value of a particular variable in a file, then we use transient keyword.
+When JVM comes across transient keyword, it ignores original value of the variable and save default
+value of that variable data type.
+
+Transient keyword plays an important role to meet security constraints. There are various real-life examples
+where we don’t want to save private data in file.
+Another use of transient keyword is not to serialize the variable whose value can be calculated/derived using
+other serialized objects or system such as age of a person, current date, etc.
+
+Practically we serialized only those fields which represent a state of instance, after all serialization is all
+about to save state of an object to a file. It is good habit to use transient keyword with private confidential fields
+of a class during serialization.
