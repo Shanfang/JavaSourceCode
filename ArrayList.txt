@@ -2,3 +2,4 @@
 ArrayList is not.
 2. It can store null.
 3. Its iterator also has fail-fast behavior, and this should only be used to detect bugs.
+4. The default size is 10, and will shrink and grow as needed.

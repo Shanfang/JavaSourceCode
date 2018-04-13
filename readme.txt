@@ -1,1 +1,1 @@
-This repo is used to record my roadmap to read Java Source code.
+Enjoy reading Java Source code.
