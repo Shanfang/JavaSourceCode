@@ -1,3 +1,8 @@
 1. Has the first AND last fields.
+
 2. The removeFirst() and removeLast() takes O(1) time as there are first and last fields.
+
 3. The addFirst() and addLast() has similar property, they all use the underline link() and unlink() methods.
+
+4. It is not synchronized, if multiple threads access the list and at least one of them modifies
+the list. External synchronization must be done.
